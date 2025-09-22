@@ -70,6 +70,15 @@ useSeoMeta({
             </p>
           </template>
         </DialogDrawer>
+
+        <HoverCardRoot>
+          <HoverCardTrigger />
+          <HoverCardPortal>
+            <HoverCardContent>
+              <HoverCardArrow />
+            </HoverCardContent>
+          </HoverCardPortal>
+        </HoverCardRoot>
       </div>
       <p
         class="mx-auto flex max-w-xl flex-wrap justify-center gap-2 pt-8 text-sm"
