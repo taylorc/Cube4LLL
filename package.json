@@ -1,0 +1,57 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "lint": "npx stylelint ./app/assets/css/**/*.css --fix && npx stylelint ./app/{components,pages,layouts}/**/*.vue --fix && eslint . --fix",
+    "postinstall": "nuxt prepare",
+    "typecheck": "npx nuxi typecheck .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{vue,ts,mjs,css}": [
+      "npm run lint",
+      "npm run typecheck"
+    ]
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "dependencies": {
+    "@nuxt/eslint": "^1.9.0",
+    "@nuxt/fonts": "^0.11.4",
+    "@nuxt/icon": "^2.0.0",
+    "@nuxt/image": "^1.11.0",
+    "@tailwindcss/vite": "^4.1.13",
+    "@vueuse/nuxt": "^13.9.0",
+    "nuxt-security": "^2.4.0",
+    "reka-ui": "^2.5.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwind-variants": "^3.1.1",
+    "tailwindcss": "^4.1.13",
+    "vaul-vue": "^0.4.1",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^2.6.3",
+    "cssnano": "^7.1.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "nuxt": "^4.1.2",
+    "prettier": "3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "stylelint": "^16.24.0",
+    "stylelint-config-recess-order": "^7.3.0",
+    "stylelint-config-recommended-vue": "^1.6.1",
+    "stylelint-config-standard": "^39.0.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-prettier": "^5.0.3",
+    "typescript": "^5.9.2",
+    "vue-tsc": "^3.0.7"
+  }
+}
